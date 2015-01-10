@@ -46,10 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Beginning.cs" />
+     <Compile Include="Assets\Scripts\Event\AndroidTouch.cs" />
+     <Compile Include="Assets\Scripts\Event\OnHoldEvent.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\OnHoldEvent.cs" />
      <Compile Include="Assets\Scripts\Store\Product.cs" />
+     <Compile Include="Assets\Scripts\UI\AvatorAnimation.cs" />
+     <Compile Include="Assets\Scripts\UI\DataPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\TogglePanel.cs" />
+     <Compile Include="Assets\Scripts\UpTimeSequence.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

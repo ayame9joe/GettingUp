@@ -11,7 +11,11 @@ public class OnHoldEvent : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 	public void OnPointerDown(PointerEventData eventData)
 	{
 
-		if (GameManager.hasCheckedToday)
+		if (!GameManager.hasCheckedToday)
+		{
+
+		}
+		else
 		{
 			StartCoroutine("StartCount");
 		}
@@ -20,7 +24,14 @@ public class OnHoldEvent : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 	
 	public void OnPointerUp(PointerEventData eventData)
 	{
-		StopCount ();
+		if (GameManager.hasCheckedToday)
+		{
+			StopCount ();
+		}
+		else
+		{
+			GameManager.onCheck = true;
+		}
 
 	}
 
@@ -33,8 +44,9 @@ public class OnHoldEvent : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 	
 	void StopCount(){
 		
-		if (i > 3){
+		if (i > 3 || i == 3){
 			Debug.Log("3 Seconds Passed");
+			GameManager.hasCheckedToday = false;
 		}
 		
 		else{
